@@ -71,4 +71,11 @@ fun HomeScreen(
         },
     ) { innerPadding ->
         val homeUiState by viewModel.homeUiState.collectAsState()
-
+        HomeBody(
+            listSiswa = homeUiState.listSiswa,
+            modifier = Modifier
+                .padding(innerPadding)
+                .fillMaxWidth()
+        )
+    }
+}
