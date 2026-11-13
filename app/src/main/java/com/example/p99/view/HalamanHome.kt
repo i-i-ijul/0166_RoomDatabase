@@ -69,4 +69,6 @@ fun HomeScreen(
                 )
             }
         },
-    )
+    ) { innerPadding ->
+        val homeUiState by viewModel.homeUiState.collectAsState()
+
