@@ -128,4 +128,8 @@ fun ListSiswa(
 fun SiswaItem(
     siswa: Siswa,
     modifier: Modifier = Modifier
-)
+) {
+    Card(
+        modifier = modifier,
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+    )
