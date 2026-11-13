@@ -142,3 +142,9 @@ fun FormInputSiswa(
                 modifier = Modifier.padding(start = dimensionResource(R.dimen.padding_medium))
             )
         }
+        HorizontalDivider(
+            thickness = dimensionResource(R.dimen.padding_small),
+            modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium))
+        )
+    }
+}
