@@ -1,0 +1,9 @@
+package com.example.p99.repositori
+
+import android.content.Context
+import com.example.p99.room.DatabaseSiswa
+
+interface ContainerApp {
+    val repositoriSiswa: RepositoriSiswa
+}
+
