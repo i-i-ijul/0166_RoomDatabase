@@ -123,3 +123,9 @@ fun ListSiswa(
         }
     }
 }
+
+@Composable
+fun SiswaItem(
+    siswa: Siswa,
+    modifier: Modifier = Modifier
+)
