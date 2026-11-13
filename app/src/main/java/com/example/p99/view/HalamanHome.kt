@@ -79,3 +79,34 @@ fun HomeScreen(
         )
     }
 }
+
+@Composable
+fun HomeBody(
+    listSiswa: List<Siswa>,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = modifier
+    ) {
+        if (listSiswa.isEmpty()) {
+            Text(
+                text = stringResource(R.string.deskripsi_no_item),
+                style = MaterialTheme.typography.titleLarge,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_large))
+            )
+        } else {
+            ListSiswa(
+                listSiswa = listSiswa,
+                modifier = Modifier.padding(horizontal = dimensionResource(id = R.dimen.padding_medium))
+            )
+        }
+    }
+}
+
+@Composable
+fun ListSiswa(
+    listSiswa: List<Siswa>,
+    modifier: Modifier = Modifier
+)
