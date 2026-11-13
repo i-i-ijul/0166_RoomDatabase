@@ -109,4 +109,17 @@ fun HomeBody(
 fun ListSiswa(
     listSiswa: List<Siswa>,
     modifier: Modifier = Modifier
-)
+) {
+    LazyColumn(
+        modifier = modifier,
+        contentPadding = PaddingValues(dimensionResource(id = R.dimen.padding_small))
+    ) {
+        items(items = listSiswa, key = { it.id }) { siswa ->
+            SiswaItem(
+                siswa = siswa,
+                modifier = Modifier
+                    .padding(dimensionResource(id = R.dimen.padding_small))
+            )
+        }
+    }
+}
